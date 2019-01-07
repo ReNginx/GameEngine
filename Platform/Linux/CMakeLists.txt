@@ -1,0 +1,7 @@
+include_directories("/opt/local/include")
+link_directories("/opt/local/lib")
+set(CMAKE_BUILD_TYPE Debug)
+add_executable(helloengine_opengl helloengine_opengl.cpp)
+add_executable(helloengine_xcb helloengine_xcb.c)
+target_link_libraries(helloengine_opengl -lxcb -lX11 -lX11-xcb -lGL -lGLU)
+target_link_libraries(helloengine_xcb -lxcb -lX11 -lX11-xcb -lGL -lGLU)
